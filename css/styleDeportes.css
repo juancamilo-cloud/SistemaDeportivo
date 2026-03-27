@@ -1,235 +1,244 @@
 /* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* COLORES */
-:root{
-    --color-primario:#2f4f7f;
-    --color-fondo:#f4f6fa;
-    --color-texto:#555;
-    --color-blanco:#fff;
+:root {
+    --color-primario: #2f4f7f;
+    --color-fondo: #f4f6fa;
+    --color-texto: #555;
+    --color-blanco: #fff;
 }
 
 /* BODY */
-body{
-    font-family:'Poppins', sans-serif;
-    background:var(--color-fondo);
-    color:var(--color-texto);
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 /* Titulos */
-h1{
+h1 {
     font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight:800;
-    color:var(--color-primario);
+    font-weight: 800;
+    color: var(--color-primario);
 }
 
-p{
+p {
     font-size: clamp(0.9rem, 2vw, 1rem);
-    line-height:1.6;
+    line-height: 1.6;
 }
 
 /* HEADER */
-header{
-    background:var(--color-primario);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px clamp(15px,5vw,40px);
-    flex-wrap:wrap; /* 👈 IGUAL QUE INICIO */
+header {
+    background: var(--color-primario);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px clamp(15px, 5vw, 40px);
+    flex-wrap: wrap;
+    /* 👈 IGUAL QUE INICIO */
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo img{
-    height:45px;
+.logo img {
+    height: 45px;
 }
 
-.logo-texto{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+.logo-texto {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.logo-texto:hover{
-    text-decoration:underline;
+.logo-texto:hover {
+    text-decoration: underline;
 }
 
 /* MENU */
-nav{
-    margin-left:30px;
-    margin-top:10px; /* 🔥 separación del logo */
+nav {
+    margin-left: 30px;
+    margin-top: 10px;
+    /* 🔥 separación del logo */
 }
 
-.menu{
-    display:flex;
-    list-style:none;
-    gap:20px;
-    overflow-x:auto;
-    white-space:nowrap;
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    overflow-x: unset;
+    white-space: nowrap;
 
-    scrollbar-width:none;       /* Firefox */
-    -ms-overflow-style:none;    /* IE */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE */
 }
 
-.menu li{
-    position:relative;
+.menu li {
+    position: relative;
 }
 
-.menu a{
-    text-decoration:none;
-    color:white;
-    padding:5px 10px;
-    display:block;
-    position:relative; /* 🔥 CLAVE */
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 6px;
+    display: block;
+    position: relative;
+    /* 🔥 CLAVE */
 }
 
 /* separadores */
-.menu li:not(:last-child)::after{
-    content:"";
-    position:absolute;
-    right:-10px;
-    top:25%;
-    height:50%;
-    width:1px;
-    background:rgba(255,255,255,.4);
+.menu li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, .4);
 }
 
-.menu a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0; /* 🔥 cambio */
-    width:0;
-    height:2px;
-    background:white;
-    transition:.3s;
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* 🔥 cambio */
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
 }
 
-.menu a:hover::after{
-    width:100%;
+.menu a:hover::after {
+    width: 100%;
 }
 
 /* MAIN */
-main{
-    padding:clamp(20px,5vw,40px);
-    max-width:1200px;
-    margin:auto;
+main {
+    padding: clamp(20px, 5vw, 40px);
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* HEADER DEPORTES */
-.deportes-header{
-    margin-bottom:30px;
+.deportes-header {
+    margin-bottom: 30px;
 }
 
-.deportes-header p{
-    color:#666;
-    margin:10px 0 15px;
+.deportes-header p {
+    color: #666;
+    margin: 10px 0 15px;
 }
 
 /* BUSCADOR */
-.buscador-deporte{
-    padding:10px 15px;
-    border-radius:8px;
-    border:1px solid #ddd;
-    width:100%;
-    max-width:260px;
+.buscador-deporte {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 260px;
 }
 
 /* GRID */
-.deportes-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:clamp(15px,3vw,30px);
-    margin-top:20px;
+.deportes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: clamp(15px, 3vw, 30px);
+    margin-top: 20px;
 }
 
 /* CARD */
-.deporte-card{
-    background:white;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
-    text-decoration:none;
-    transition:.3s;
-    width:100%;
+.deporte-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+    text-decoration: none;
+    transition: .3s;
+    width: 100%;
 }
 
-.deporte-card img{
-    width:100%;
-    height:140px;
-    object-fit:cover;
+.deporte-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
 }
 
 /* INFO */
-.deporte-info{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:12px;
+.deporte-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
 }
 
-.deporte-info img{
-    width:32px;
-    height:32px;
+.deporte-info img {
+    width: 32px;
+    height: 32px;
 }
 
-.deporte-info span{
-    font-weight:600;
+.deporte-info span {
+    font-weight: 600;
 }
 
 /* HOVER */
-.deporte-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 14px 30px rgba(0,0,0,.25);
+.deporte-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .25);
 }
 
 /* FOOTER */
-footer{
-    background:var(--color-primario);
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:40px;
+footer {
+    background: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
 
 /* ===================== */
 /* 📱 RESPONSIVE (IGUAL QUE INICIO) */
 /* ===================== */
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    header{
-        flex-wrap:wrap; /* 👈 solo esto, nada raro */
+    header {
+        flex-wrap: wrap;
+        /* 👈 solo esto, nada raro */
     }
 
-    nav{
-        width:100%;
-        margin-left:0;
+    nav {
+        width: 100%;
+        margin-left: 0;
     }
 
-    .menu{
-        gap:15px; /* 👈 solo espacio */
+    .menu {
+        gap: 15px;
+        /* 👈 solo espacio */
     }
 
-    .menu li::after{
-        display:none; /* quitar separadores */
+    .menu li::after {
+        display: none;
+        /* quitar separadores */
     }
 
-    main{
-        max-width:100%;
+    main {
+        max-width: 100%;
     }
 
-    .deportes-grid{
-        grid-template-columns:1fr;
+    .deportes-grid {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -237,18 +246,18 @@ footer{
 /* ===================== */
 /* 💻 PC */
 /* ===================== */
-@media(min-width:1024px){
+@media(min-width:1024px) {
 
-    .layout-anuncios{
-        grid-template-columns:2fr 1fr;
+    .layout-anuncios {
+        grid-template-columns: 2fr 1fr;
     }
 
-    .card{
-        width:200px;
+    .card {
+        width: 200px;
     }
 
-    .contenedor-anuncios{
-        justify-content:flex-start;
+    .contenedor-anuncios {
+        justify-content: flex-start;
     }
 
 }
