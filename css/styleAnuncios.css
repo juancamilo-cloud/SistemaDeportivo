@@ -1,160 +1,194 @@
+/* ===================== */
 /* RESET */
+/* ===================== */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* ===================== */
 /* VARIABLES */
+/* ===================== */
 :root{
-    --color-primario:#2f4f7f;
-    --color-fondo:#f4f6fa;
-    --color-texto:#555;
-    --color-blanco:#fff;
+    --color-primario:#1b3f9e;
+    --color-secundario:#2355c8;
+    --color-fondo:#f0f2f8;
+    --color-texto:#1a1a1a;
 
-    --fs-title: clamp(1.5rem, 5vw, 2.2rem);
-    --fs-sub: clamp(1.1rem, 3vw, 1.4rem);
-    --fs-body: clamp(0.9rem, 2vw, 1rem);
+    --fs-title: clamp(1.6rem, 5vw, 2.6rem);
+    --fs-sub: clamp(1rem, 2.5vw, 1.25rem);
+    --fs-body: clamp(0.8rem, 1.5vw, 0.9rem);
 
-    --padding: clamp(15px, 5vw, 40px);
+    --padding: clamp(20px,5vw,80px);
 }
 
+/* ===================== */
 /* BODY */
+/* ===================== */
 body{
     font-family:'Poppins', sans-serif;
     background:var(--color-fondo);
     color:var(--color-texto);
 }
 
-/* TITULOS */
-h1{
-    font-size:var(--fs-title);
-    font-weight:800;
-    color:#2b2b2b;
-}
-
-h2{
-    font-size:var(--fs-sub);
-    font-weight:700;
-    color:var(--color-primario);
-}
-
-h3{
-    font-weight:600;
-}
-
-/* TEXTOS */
-p{
-    font-size:var(--fs-body);
-    line-height:1.6;
-}
-
-/* HEADER */
-header{
-    background:var(--color-primario);
-    color:white;
+/* ===================== */
+/* 🔥 PORTADA */
+/* ===================== */
+.portada{
+    background: linear-gradient(135deg, #1b3f9e 0%, #2355c8 60%, #1a4ab5 100%);
+    padding: clamp(40px,6vw,60px) var(--padding);
+    padding-top:80px; /* 🔥 FIX ESPACIO */
     display:flex;
-    flex-direction:column; /* 🔥 clave */
-    padding:15px var(--padding);
+    justify-content:space-between;
+    align-items:center;
+    min-height:360px;
+    position:relative;
+    overflow:hidden;
 }
 
+/* círculo decorativo */
+.portada::before{
+    content:"";
+    position:absolute;
+    top:-80px;
+    right:-80px;
+    width:400px;
+    height:400px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+}
+
+/* ===================== */
+/* 🔵 TOP BAR */
+/* ===================== */
+.top-bar{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+
+    background:rgba(0,0,0,0.2); /* 🔥 NUEVO */
+
+    padding:12px var(--padding);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:10;
+}
+
+/* ===================== */
+/* LOGO */
+/* ===================== */
 .logo{
     display:flex;
     align-items:center;
     gap:10px;
+    color:white;
+    font-weight:600;
+    text-decoration:none;
+    position:relative;
 }
 
 .logo img{
-    height:auto;
-    width:40px;
+    width:50px;
 }
 
-.logo-texto{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    font-size:var(--fs-body);
-}
-
-.logo-texto:hover{
-    text-decoration:underline;
-}
-
-/* MENU */
-nav{
-    width:100%;
-    margin-top:10px; /* 🔥 separación */
-}
-
-/* 🔵 FILA 1 */
-.top-bar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    width:100%;
-}
-
-.menu{
-    display:flex;
-    list-style:none;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.menu li{
-    flex:0 0 auto;
-}
-
-.menu a{
-    text-decoration:none;
-    color:white;
-    padding:5px;
-    position:relative;
-    font-size:var(--fs-body);
-}
-
-/* separadores */
-.menu li:not(:last-child)::after{
+/* línea animada */
+.logo::after{
     content:"";
     position:absolute;
-    right:-10px;
-    top:25%;
-    height:50%;
-    width:1px;
-    background:rgba(255,255,255,.4);
-}
-
-/* linea hover */
-.menu a::after{
-    content:"";
-    position:absolute;
+    bottom:-4px;
     left:0;
-    bottom:0;
     width:0;
     height:2px;
     background:white;
     transition:.3s;
 }
 
-.menu a:hover::after{
+.logo:hover::after{
     width:100%;
 }
 
+/* ===================== */
+/* USUARIO */
+/* ===================== */
+.usuario{
+    color:white;
+    font-size:20px;
+}
+
+/* ===================== */
+/* CONTENIDO PORTADA */
+/* ===================== */
+.contenido-portada{
+    max-width:500px;
+    z-index:1;
+}
+
+.contenido-portada h1{
+    font-size:var(--fs-title);
+    font-weight:800;
+    color:white;
+    line-height:1.15;
+    margin-bottom:15px;
+}
+
+.contenido-portada p{
+    font-size:var(--fs-body);
+    color:rgba(255,255,255,.85);
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* BOTONES */
+.botones-portada{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    max-width:350px;
+}
+
+.botones-portada a{
+    border:2px solid rgba(255,255,255,.85);
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    text-align:center;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.botones-portada a:hover{
+    background:white;
+    color:#1b3f9e;
+    transform:translateY(-2px);
+}
+
+/* ===================== */
 /* MAIN */
+/* ===================== */
 main{
     padding:var(--padding);
     max-width:1200px;
     margin:auto;
 }
 
+/* ===================== */
 /* LAYOUT */
+/* ===================== */
 .layout-anuncios{
     display:grid;
     grid-template-columns:1fr;
     gap:25px;
 }
 
-/* CONTENIDO */
+/* ===================== */
+/* CONTENIDO PRINCIPAL */
+/* ===================== */
 .contenido-principal{
     background:white;
     padding:25px;
@@ -165,7 +199,9 @@ main{
     gap:30px;
 }
 
-/* ANUNCIOS */
+/* ===================== */
+/* CARDS */
+/* ===================== */
 .contenedor-anuncios{
     display:flex;
     flex-direction:column;
@@ -187,21 +223,23 @@ main{
 
 .card img{
     width:100%;
-    height:260px; /* ← volvemos al tamaño original */
+    height:260px;
     object-fit:cover;
     border-radius:10px;
     transition:.3s;
 }
 
 .card:hover{
- transform:translateY(-5px);
+    transform:translateY(-5px);
 }
 
 .card:hover img{
     transform:scale(1.05);
 }
 
+/* ===================== */
 /* RECIENTES */
+/* ===================== */
 .recientes h2{
     margin-bottom:20px;
     font-size:var(--fs-sub);
@@ -225,7 +263,6 @@ main{
     gap:15px;
 }
 
-/* ITEM */
 .item{
     display:flex;
     gap:15px;
@@ -235,19 +272,18 @@ main{
     box-shadow:0 6px 15px rgba(0,0,0,.1);
     text-decoration:none;
     transition:.2s;
+    color:inherit;
 }
 
 .item:hover{
     transform:translateY(-4px);
 }
 
-/* ICONO */
 .icono-evento{
     width:55px;
     height:55px;
 }
 
-/* TEXTO */
 .info-evento h3{
     color:var(--color-primario);
     font-size:var(--fs-body);
@@ -257,7 +293,9 @@ main{
     font-size:0.85rem;
 }
 
+/* ===================== */
 /* PROXIMOS */
+/* ===================== */
 .card-partidos{
     background:white;
     border-radius:14px;
@@ -274,7 +312,7 @@ main{
 }
 
 .contenedor-partidos{
-  padding:15px;
+    padding:15px;
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -291,6 +329,7 @@ main{
 
 .partido img{
     width:100%;
+    transition:.3s;
 }
 
 .partido:hover{
@@ -301,45 +340,69 @@ main{
     transform:scale(1.03);
 }
 
+/* ===================== */
 /* FOOTER */
+/* ===================== */
 footer{
-    background:var(--color-primario);
+    background:linear-gradient(135deg,#1b3f9e,#2355c8);
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
     margin-top:30px;
     font-size:0.9rem;
 }
 
-/* RESPONSIVE */
-/* 📱 TABLET */
-@media(min-width:768px){
+/* ===================== */
+/* 📱 RESPONSIVE */
+/* ===================== */
+@media(max-width:900px){
+
+    .portada{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+        padding-top:80px;
+    }
+
+    .top-bar{
+        position:static;
+        width:100%;
+        margin-bottom:20px;
+    }
+
+    .contenido-portada{
+        max-width:100%;
+    }
+
+    .botones-portada{
+        max-width:100%;
+    }
+
+    .layout-anuncios{
+        grid-template-columns:1fr;
+    }
 
     .contenedor-anuncios{
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:center;
+        align-items:center;
     }
-
-    .card{
-        width:45%;
-    }
-
 }
 
+/* ===================== */
 /* 💻 PC */
+/* ===================== */
 @media(min-width:1024px){
 
     .layout-anuncios{
         grid-template-columns:2fr 1fr;
     }
 
-    .card{
-        width:200px;
-    }
-
     .contenedor-anuncios{
+        flex-direction:row;
+        flex-wrap:wrap;
         justify-content:flex-start;
     }
 
+    .card{
+        width:200px;
+    }
 }
