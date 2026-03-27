@@ -66,12 +66,14 @@ header{
 /* MENU */
 nav{
     margin-left:30px;
+    width:100%;
 }
 
 .menu{
     display:flex;
     list-style:none;
     gap:20px;
+    flex-wrap:wrap; /* ← CLAVE */
 }
 
 .menu li{
@@ -114,7 +116,7 @@ nav{
 
 /* MAIN */
 main{
-    padding:40px;
+    padding:clamp(20px,5vw,40px);
     max-width:1200px;
     margin:auto;
 }
@@ -138,7 +140,8 @@ main{
     padding:10px 15px;
     border-radius:8px;
     border:1px solid #ddd;
-    width:260px;
+    width:100%;
+    max-width:260px;
 }
 
 /* GRID */
