@@ -54,10 +54,8 @@ header{
     background:var(--color-primario);
     color:white;
     display:flex;
-    align-items:center;
-    justify-content:space-between;
+    flex-direction:column; /* 🔥 clave */
     padding:15px var(--padding);
-    flex-wrap:wrap;
 }
 
 .logo{
@@ -84,7 +82,15 @@ header{
 
 /* MENU */
 nav{
-    margin-left:0;
+    width:100%;
+    margin-top:10px; /* 🔥 separación */
+}
+
+/* 🔵 FILA 1 */
+.top-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     width:100%;
 }
 
@@ -123,7 +129,7 @@ nav{
     content:"";
     position:absolute;
     left:0;
-    bottom:-4px;
+    bottom:0;
     width:0;
     height:2px;
     background:white;
