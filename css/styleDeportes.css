@@ -40,7 +40,7 @@ header{
     align-items:center;
     justify-content:space-between;
     padding:15px clamp(15px,5vw,40px);
-    flex-wrap:wrap;
+    flex-wrap:wrap; /* 👈 IGUAL QUE INICIO */
 }
 
 .logo{
@@ -66,14 +66,18 @@ header{
 /* MENU */
 nav{
     margin-left:30px;
-    width:100%;
+    margin-top:10px; /* 🔥 separación del logo */
 }
 
 .menu{
     display:flex;
     list-style:none;
     gap:20px;
-    flex-wrap:wrap;
+    overflow-x:auto;
+    white-space:nowrap;
+
+    scrollbar-width:none;       /* Firefox */
+    -ms-overflow-style:none;    /* IE */
 }
 
 .menu li{
@@ -85,6 +89,7 @@ nav{
     color:white;
     padding:5px 10px;
     display:block;
+    position:relative; /* 🔥 CLAVE */
 }
 
 /* separadores */
@@ -98,12 +103,11 @@ nav{
     background:rgba(255,255,255,.4);
 }
 
-/* linea hover */
 .menu a::after{
     content:"";
     position:absolute;
     left:0;
-    bottom:-5px;
+    bottom:0; /* 🔥 cambio */
     width:0;
     height:2px;
     background:white;
@@ -199,45 +203,33 @@ footer{
 }
 
 /* ===================== */
-/* 📱 RESPONSIVE MOVIL */
+/* 📱 RESPONSIVE (IGUAL QUE INICIO) */
 /* ===================== */
 @media(max-width:768px){
 
-    /* HEADER */
     header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:10px;
+        flex-wrap:wrap; /* 👈 solo esto, nada raro */
     }
 
     nav{
-        margin-left:0;
         width:100%;
+        margin-left:0;
     }
 
     .menu{
-        flex-direction:column;   /* 🔥 clave */
-        align-items:flex-start;
-        gap:8px;
+        gap:15px; /* 👈 solo espacio */
     }
 
     .menu li::after{
-        display:none;
+        display:none; /* quitar separadores */
     }
 
-    /* MAIN FULL WIDTH */
     main{
         max-width:100%;
     }
 
-    /* GRID 1 COLUMNA */
     .deportes-grid{
         grid-template-columns:1fr;
-    }
-
-    /* CARDS FULL */
-    .deporte-card{
-        width:100%;
     }
 
 }
