@@ -216,8 +216,9 @@ footer{
     }
 
     .menu{
-        width:100%;
-        gap:10px;
+        flex-direction:column;   /* 🔥 clave */
+        align-items:flex-start;
+        gap:8px;
     }
 
     .menu li::after{
