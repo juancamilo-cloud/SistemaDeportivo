@@ -4,162 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncios - Sistema Deportivo</title>
 
-    <title>Sistema Deportivo - Unimagdalena</title>
-
-<link href="css/tipografia.css" rel="stylesheet">
-<link rel="stylesheet" href="css/styleAnuncios.css">
-
+    <link href="css/tipografia.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleAnuncios.css">
 </head>
 
 <body>
 
-    <header>
+<!-- 🔥 PORTADA (IGUAL A INICIO) -->
+<section class="portada">
 
-        <div class="logo">
-            <img src="img/unimag_logo.png" alt="Logo Unimagdalena">
-            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Direccion/10" class="logo-texto"
-                target="_blank">BIENESTAR
-                UNIMAGDALENA</a>
+    <!-- 🔵 BARRA SUPERIOR -->
+    <div class="top-bar">
+
+        <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Direccion/10"
+           class="logo" target="_blank">
+
+            <img src="img/unimag_logo.png" alt="Logo">
+
+            <span class="logo-texto">
+                BIENESTAR UNIMAGDALENA
+            </span>
+
+        </a>
+
+        <div class="usuario">👤</div>
+
+    </div>
+
+    <!-- 🔥 CONTENIDO -->
+    <div class="contenido-portada">
+
+        <h1>Anuncios Deportivos</h1>
+
+        <p>
+            Mantente informado con convocatorias, eventos y novedades del deporte universitario.
+        </p>
+
+        <div class="botones-portada">
+            <a href="inicio.html">Inicio</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="deportes.html">Deportes</a>
+            <a href="torneos.html">Torneos</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 🔽 CONTENIDO -->
+<main class="layout-anuncios">
+
+    <section class="contenido-principal">
+
+        <div class="contenedor-anuncios">
+
+            <a href="#" class="card">
+                <img src="img/anuncio1.jpeg">
+            </a>
+
+            <a href="#" class="card">
+                <img src="img/anuncio2.jpeg">
+            </a>
+
+            <a href="#" class="card">
+                <img src="img/anuncio3.jpeg">
+            </a>
+
         </div>
 
 
-        <nav>
-            <ul class="menu">
+        <section class="recientes">
 
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="deportes.html">Deportes</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-                <li class="activo"><a href="anuncios.html">Anuncios</a></li>
-                <li><a href="torneos.html">Torneos</a></li>
+            <h2>Más recientes</h2>
 
-            </ul>
-        </nav>
-    </header>
+            <div class="lista">
 
+                <a href="#" class="item">
+                    <img src="img/futbolB.png" class="icono-evento">
 
+                    <div class="info-evento">
+                        <h3>Liga Universitaria de Fútbol</h3>
+                        <p>⚽ Categoría A · Fecha #1</p>
+                        <p>📅 9 – 13 de Marzo</p>
+                        <p>📍 Estadio Unimagdalena</p>
+                    </div>
+                </a>
 
-    <main class="layout-anuncios">
+                <a href="#" class="item">
+                    <img src="img/futbolB.png" class="icono-evento">
 
-        <section class="contenido-principal">
+                    <div class="info-evento">
+                        <h3>Liga Universitaria de Futsal</h3>
+                        <p>⚽ Fecha #1</p>
+                        <p>📅 10 – 11 de Marzo</p>
+                        <p>📍 Cancha #4</p>
+                    </div>
+                </a>
 
-            <section class="anuncios">
+                <a href="#" class="item">
+                    <img src="img/futbolB.png" class="icono-evento">
 
-                <h1>Anuncios</h1>
-                <p>Mantente informado con los últimos anuncios deportivos.</p>
-
-                <div class="contenedor-anuncios">
-
-                    <a href="#" class="card">
-                        <img src="img/anuncio1.jpeg" alt="Anuncio 1">
-                    </a>
-
-                    <a href="#" class="card">
-                        <img src="img/anuncio2.jpeg" alt="Anuncio 2">
-                    </a>
-
-                    <a href="#" class="card">
-                        <img src="img/anuncio3.jpeg" alt="Anuncio 3">
-                    </a>
-
-                </div>
-
-            </section>
-
-
-
-            <section class="recientes">
-
-                <h2>Más recientes</h2>
-
-                <div class="lista">
-
-                    <a href="https://copafacil.com/-b7e2@euw7p" class="item">
-
-                        <img src="img/futbolB.png" class="icono-evento">
-
-                        <div class="info-evento">
-                            <h3>Liga Universitaria de Fútbol</h3>
-                            <p>⚽ Categoría A · Fecha #1</p>
-                            <p>📅 9 – 13 de Marzo</p>
-                            <p>📍 Estadio de fútbol Unimagdalena</p>
-                        </div>
-
-                    </a>
-
-
-
-                    <a href="https://copafacil.com/-b7e2@zzys1" class="item">
-
-                        <img src="img/futbolB.png" class="icono-evento">
-
-                        <div class="info-evento">
-                            <h3>Liga Universitaria de Futsal</h3>
-                            <p>⚽ Fecha #1</p>
-                            <p>📅 10 – 11 de Marzo</p>
-                            <p>📍 Cancha Múltiple #4</p>
-                        </div>
-
-                    </a>
-
-
-
-                    <a href="https://copafacil.com/-b7e2@p0xx7" class="item">
-
-                        <img src="img/futbolB.png" class="icono-evento">
-
-                        <div class="info-evento">
-                            <h3>Liga Universitaria de Fútbol</h3>
-                            <p>⚽ Categoría B · Fecha #1</p>
-                            <p>📅 10 – 13 de Marzo</p>
-                            <p>📍 Estadio de fútbol Unimagdalena</p>
-                            <p>👤 Sergio Arboleda</p>
-                        </div>
-
-                    </a>
-
-                </div>
-
-            </section>
-
-        </section>
-
-
-
-        <section class="proximos">
-
-            <div class="card-partidos">
-
-                <h3 class="titulo-partidos">¡Próximos Encuentros!</h3>
-
-                <div class="contenedor-partidos">
-
-                    <a href="#" class="partido">
-                        <img src="img/partido1.png">
-                    </a>
-
-                    <a href="#" class="partido">
-                        <img src="img/partido3.jpeg">
-                    </a>
-
-                </div>
+                    <div class="info-evento">
+                        <h3>Liga Universitaria de Fútbol</h3>
+                        <p>⚽ Categoría B</p>
+                        <p>📅 10 – 13 de Marzo</p>
+                        <p>📍 Estadio Unimagdalena</p>
+                    </div>
+                </a>
 
             </div>
 
         </section>
 
-    </main>
+    </section>
 
 
-    <footer>
+    <section class="proximos">
 
-        <p>© 2026 Sistema Deportivo Universidad del Magdalena</p>
+        <div class="card-partidos">
 
-        <p>Bienestar Universitario</p>
+            <h3 class="titulo-partidos">¡Próximos Encuentros!</h3>
 
-    </footer>
+            <div class="contenedor-partidos">
 
+                <a href="#" class="partido">
+                    <img src="img/partido1.png">
+                </a>
+
+                <a href="#" class="partido">
+                    <img src="img/partido3.jpeg">
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Sistema Deportivo Universidad del Magdalena</p>
+    <p>Bienestar Universitario</p>
+</footer>
 
 </body>
-
 </html>
