@@ -73,7 +73,7 @@ nav{
     display:flex;
     list-style:none;
     gap:20px;
-    flex-wrap:wrap; /* ← CLAVE */
+    flex-wrap:wrap;
 }
 
 .menu li{
@@ -126,10 +126,6 @@ main{
     margin-bottom:30px;
 }
 
-.deportes-header h1{
-    color:var(--color-primario);
-}
-
 .deportes-header p{
     color:#666;
     margin:10px 0 15px;
@@ -160,7 +156,6 @@ main{
     box-shadow:0 8px 18px rgba(0,0,0,.15);
     text-decoration:none;
     transition:.3s;
-
     width:100%;
 }
 
@@ -203,12 +198,12 @@ footer{
     margin-top:40px;
 }
 
-
-
-/* RESPONSIVE */
-/* 📱 TABLET */
+/* ===================== */
+/* 📱 RESPONSIVE MOVIL */
+/* ===================== */
 @media(max-width:768px){
 
+    /* HEADER */
     header{
         flex-direction:column;
         align-items:flex-start;
@@ -224,15 +219,31 @@ footer{
         width:100%;
         gap:10px;
     }
-    
-        .menu li::after{
+
+    .menu li::after{
         display:none;
     }
 
+    /* MAIN FULL WIDTH */
+    main{
+        max-width:100%;
+    }
+
+    /* GRID 1 COLUMNA */
+    .deportes-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* CARDS FULL */
+    .deporte-card{
+        width:100%;
+    }
 
 }
 
+/* ===================== */
 /* 💻 PC */
+/* ===================== */
 @media(min-width:1024px){
 
     .layout-anuncios{
