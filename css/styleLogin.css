@@ -1,0 +1,144 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* COLORES DEL SITIO */
+
+:root {
+    --color-primario: #2E4A7D;
+    --color-fondo: #f4f6fa;
+    --color-texto: #555;
+    --color-blanco: #ffffff;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial;
+    background: var(--color-fondo);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 40px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo-texto {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-texto:hover {
+    text-decoration: underline;
+}
+
+/* TITULO */
+.titulo {
+    text-align: center;
+    margin: 30px 0;
+    color: #2f3e5c;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex: 1;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARD LOGIN */
+.card {
+    background: white;
+    padding: 30px;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.card label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* INPUTS */
+.card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* BOTON */
+.card button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    font-size:16px;
+    cursor: pointer;
+}
+
+/* IMAGEN */
+.imagen img {
+    width: 500px;
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+padding:20px;
+background:#2E4A7D;
+margin-top:40px;
+color:#ffffff
+}

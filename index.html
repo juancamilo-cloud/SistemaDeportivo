@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema Deportivo Unimagdalena</title>
+    <link rel="stylesheet" href="./css/styleLogin.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/unimag_logo.png" alt="Logo Unimagdalena">
+            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Direccion/10" class="logo-texto"
+                target="_blank">BIENESTAR UNIMAGDALENA</a>
+        </div>
+    </header>
+
+    <h1 class="titulo">SISTEMA DEPORTIVO UNIMAGDALENA</h1>
+
+    <div class="contenedor">
+
+        <!-- LOGIN -->
+        <div class="card">
+            <h2>Iniciar Sesión</h2>
+            <p>Ingresa a tu cuenta con tu correo estudiantil y contraseña.</p>
+
+            <form id="loginForm">
+
+                <label>Correo estudiantil</label>
+                <input type="email" id="correo" placeholder="usuario@unimagdalena.edu.co" required>
+
+                <label>Contraseña</label>
+                <input type="password" id="password" placeholder="Contraseña" required>
+
+                <button onclick="window.location.href='inicio.html'">
+                Iniciar Sesión
+                </button>
+
+            </form>
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="imagen">
+            <img src="img/imagen Login.png" alt="FOTO - LOGIN">
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>© 2026 Sistema Deportivo Universidad del Magdalena</p>
+        <p>Bienestar Universitario</p>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,541 @@
+/*responsive para dispositivos mobiles*/
+:root {
+    --color-primary:      #1b3f9e;
+    --color-primary-dark: #142e7a;
+    --color-primary-mid:  #2355c8;
+    --color-white:        #ffffff;
+    --color-bg:           #f0f2f8;
+    --color-text:         #1a1a1a;
+    --color-muted:        #666666;
+
+    --fs-hero:    clamp(1.6rem, 5vw, 2.6rem);
+    --fs-h2:      clamp(1rem, 2.5vw, 1.25rem);
+    --fs-body:    clamp(0.8rem, 1.5vw, 0.9rem);
+    --fs-label:   clamp(0.85rem, 1.5vw, 1rem);
+    --fs-small:   clamp(0.7rem, 1.2vw, 0.78rem);
+
+    --space-section: clamp(1.5rem, 5vw, 5rem);
+    --space-gap:     clamp(0.75rem, 2vw, 1.25rem);
+
+    --escudo-size: 56px;
+
+    --radius-card: 16px;
+    --radius-btn:  8px;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    padding: 12px var(--space-section);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.navbar-brand .escudo {
+    width:  var(--escudo-size);
+    height: var(--escudo-size);
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%,
+                                        var(--color-primary-mid) 60%,
+                                        #1a4ab5 100%);
+    padding: clamp(2.5rem, 6vw, 4rem) var(--space-section);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: var(--fs-hero);
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: var(--fs-body);
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 420px;
+}
+
+.hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 160px));
+    gap: 10px;
+}
+
+.hero-buttons a {
+    border: 2px solid rgba(255,255,255,0.85);
+    color: var(--color-white);
+    padding: clamp(0.55rem, 1.5vw, 0.75rem) 1.1rem;
+    border-radius: var(--radius-btn);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-small);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.22s, color 0.22s, transform 0.22s;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-sports-img {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 280px;
+    gap: 6px;
+    justify-content: center;
+    z-index: 1;
+    line-height: 1;
+}
+.section-label {
+    padding: clamp(1.5rem, 4vw, 2.5rem) var(--space-section) 0.75rem;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-gap);
+    padding: 0 var(--space-section) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.tarjeta-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sport-card-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.sport-card-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    font-size: var(--fs-label);
+    font-weight: 700;
+}
+
+.announcements-section {
+    padding: 0.5rem var(--space-section) clamp(2rem, 5vw, 3.5rem);
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-gap);
+}
+
+.match-title {
+    font-size: clamp(0.8rem, 1.5vw, 0.92rem);
+    font-weight: 700;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f8;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+.barra-navegacion {
+    background-color: #1b3f9e;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.marca-navegacion {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+/* Tamaño del escudo de Unimagdalena */
+.marca-navegacion .escudo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border-radius: 50%;
+    
+}
+
+.texto-marca {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 1.1;
+}
+
+.texto-marca .bienestar {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.texto-marca .unimagdalena {
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ===== PORTADA ===== */
+.portada {
+    background: linear-gradient(135deg, #1b3f9e 0%, #2355c8 60%, #1a4ab5 100%);
+    padding: 55px 80px 55px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 360px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portada::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+}
+
+.contenido-portada {
+    max-width: 490px;
+    z-index: 1;
+}
+
+.contenido-portada h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.contenido-portada p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.65;
+    margin-bottom: 32px;
+    max-width: 420px;
+    text-align: center;
+}
+
+.botones-portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 340px;
+}
+
+.botones-portada a {
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,0.85);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.botones-portada a:hover {
+    background-color: white;
+    color: #1b3f9e;
+    transform: translateY(-2px);
+}
+
+.imagen-deportes {
+    font-size: 95px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 340px;
+    gap: 8px;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* ===== SECCIÓN DE DEPORTES ===== */
+.etiqueta-seccion {
+    padding: 36px 80px 14px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1b3f9e;
+}
+
+.rejilla-deportes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 80px 44px;
+}
+
+.tarjeta-deporte {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(27,63,158,0.12);
+    cursor: pointer;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.tarjeta-deporte:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(27,63,158,0.2);
+}
+
+.tarjeta-deporte-img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Placeholder de imagen con gradiente */
+.placeholder-imagen-deporte {
+    width: 100%;
+    height: 190px;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2.4rem, 8vw, 4.2rem);
+    line-height: 1;
+}
+
+.placeholder-imagen-deporte.futbol   { background: linear-gradient(135deg, #1a6b30, #2d9e4a); }
+.placeholder-imagen-deporte.voleibol  { background: linear-gradient(135deg, #1a3fa0, #2970e0); }
+.placeholder-imagen-deporte.baloncesto{ background: linear-gradient(135deg, #b04010, #e05820); }
+.placeholder-imagen-deporte.tenis     { background: linear-gradient(135deg, #456b10, #7ab020); }
+
+.etiqueta-tarjeta-deporte {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.etiqueta-tarjeta-deporte .icono {
+    font-size: 26px;
+}
+
+/* ===== SECCIÓN DE ANUNCIOS ===== */
+.seccion-anuncios {
+    padding: 10px 80px 54px;
+}
+
+.encabezado-anuncios {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.encabezado-anuncios h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1b3f9e;
+}
+
+.etiqueta-nuevo {
+    background-color: #e53935;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.rejilla-partidos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.tarjeta-partido {
+    background: white;
+    border-radius: 13px;
+    padding: 18px 20px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-left: 5px solid;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.tarjeta-partido:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.tarjeta-partido.futbol    { border-color: #27ae60; }
+.tarjeta-partido.voleibol  { border-color: #2980b9; }
+.tarjeta-partido.baloncesto{ border-color: #e67e22; }
+.tarjeta-partido.tenis     { border-color: #8e44ad; }
+
+.caja-fecha-partido {
+    text-align: center;
+    min-width: 52px;
+    background: #f0f4ff;
+    border-radius: 10px;
+    padding: 8px 6px;
+}
+
+.caja-fecha-partido .dia {
+    font-size: 27px;
+    font-weight: 900;
+    color: #1b3f9e;
+    line-height: 1;
+}
+
+.caja-fecha-partido .mes {
+    font-size: 11px;
+    font-weight: 700;
+    color: #7a8db5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-partido { flex: 1; }
+
+.etiqueta-deporte-partido {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #aaa;
+    margin-bottom: 3px;
+}
+
+.titulo-partido {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.meta-partido {
+    display: flex;
+    gap: 14px;
+    font-size: 12px;
+    color: #666;
+    flex-wrap: wrap;
+}
+
+.estado-partido {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-align: center;
+    white-space: nowrap;
+    align-self: center;
+}
+
+.estado-partido.proximo   { background: #e8f5e9; color: #27ae60; }
+.estado-partido.hoy       { background: #fff3e0; color: #e67e22; }
+.estado-partido.importante{ background: #f3e5f5; color: #8e44ad; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(135deg, #1b3f9e, #2355c8);
+    color: white;
+    text-align: center;
+    padding: 22px 20px;
+    font-size: 13px;
+}
+
+footer p:first-child {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+footer p:last-child { opacity: 0.75; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .portada { flex-direction: column; padding: 40px 24px; text-align: center; }
+    .contenido-portada h1 { font-size: 28px; }
+    .contenido-portada p { max-width: 100%; }
+    .botones-portada { max-width: 100%; }
+    .imagen-deportes { display: none; }
+    .rejilla-deportes { grid-template-columns: repeat(2, 1fr); padding: 0 24px 30px; }
+    .etiqueta-seccion { padding: 28px 24px 12px; }
+    .seccion-anuncios { padding: 10px 24px 40px; }
+    .rejilla-partidos { grid-template-columns: 1fr; }
+}

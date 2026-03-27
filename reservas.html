@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Espacio Deportivo</title>
+    <link rel="stylesheet" href="./css/styleReservas.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/unimag_logo.png" alt="Logo Unimagdalena">
+            <a href="https://www.unimagdalena.edu.co/UnidadesOrganizativas/Direccion/10" class="logo-texto"
+            target="_blank">BIENESTAR UNIMAGDALENA</a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="deportes.html">Deportes</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li class="activo"><a href="anuncios.html">Anuncios</a></li>
+                <li><a href="torneos.html">Torneos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="reserva-container">
+
+            <div class="reserva-info">
+                <h1>Reservar Espacio Deportivo</h1>
+                <p>Reserva un espacio deportivo en la universidad llenando el formulario.</p>
+
+                <div class="form-card">
+                    <h2>Reservar Espacio</h2>
+
+                    <form>
+                        <label>Nombre Completo</label>
+                        <input type="text" placeholder="Ingresa tu nombre" required>
+                        <label>Código Estudiantil</label>
+                        <input type="text" placeholder="Ingresa tu código" required>
+                        <label>Correo Estudiantil</label>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+
+                        <label>Espacio Deportivo</label>
+
+                        <select>
+                            <option>Cancha Alterna de Fútbol</option>
+                            <option>Cancha Multiple #1 - Voleibol</option>
+                            <option>Cancha Multiple #2 - Baloncesto</option>
+                            <option>Cancha Multiple #3 - Futsal</option>
+                            <option>Cancha de tenis de campo</option>
+                            <option>Estadio de Sóftbol unimagdalena</option>
+                            <option>Salon de tenis de mesa</option>
+                        </select>
+
+                        <label>Fecha</label>
+                        <input type="date">
+
+                        <small>horario disponible 6:00 am - 6:00 pm</small>
+
+                        <label>Duración (Máximo 2 horas)</label>
+
+                        <div class="radio-group">
+
+                            <label>
+                                <input type="radio" name="duracion"> 1 hora
+                            </label>
+
+                            <label>
+                            <input type="radio" name="duracion"> 2 horas
+                            </label>
+
+                        </div>
+
+                        <button type="submit" class="reservar-btn">
+                        Reservar Espacio
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="reserva-imagen">
+                <img src="./img/imagen reservas.png" alt="canchas deportivas">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Sistema Deportivo Universidad del Magdalena</p>
+        <p>Bienestar Universitario</p>
+
+    </footer>
+
+</body>
+</html>

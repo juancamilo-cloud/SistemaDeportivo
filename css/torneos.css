@@ -1,0 +1,443 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+    --color-primario-medio: #1b3f9e;
+    --color-primario: #2E4A7D;
+    --color-blanco: #ffffff;
+    --color-fondo: #f0f2f8;
+    --color-texto: #1a1a1a;
+    --color-atenuado: #666666;
+
+    --fuente-titulo: clamp(1.8rem, 4vw, 2.4rem);
+    --fuente-subtitulo: clamp(1rem, 2.5vw, 1.25rem);
+    --fuente-cuerpo: clamp(0.8rem, 1.5vw, 0.9rem);
+    --fuente-pequena: clamp(0.7rem, 1.2vw, 0.78rem);
+
+    --espacio-seccion: clamp(1.5rem, 5vw, 5rem);
+    --espacio-gap: clamp(0.75rem, 2vw, 1.25rem);
+
+    --escudo-tamano: 56px;
+
+    --color-competitiva: #c0392b;
+    --color-formativa: #27ae60;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--color-fondo);
+}
+
+/* ================= HEADER ================= */
+header {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo-texto {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-texto:hover {
+    text-decoration: underline;
+}
+
+/* ================= NAV ================= */
+nav {
+    margin-left: 30px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    padding: 5px 10px;
+    display: block;
+}
+
+/* separadores */
+.menu li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, .4);
+}
+
+/* linea hover */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: yellow;
+    transition: .3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ================= IMG ================= */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+:root {
+    --color-primario-medio: #1b3f9e;
+    --color-primario: #2E4A7D;
+    --color-blanco: #ffffff;
+    --color-fondo: #f0f2f8;
+    --color-texto: #1a1a1a;
+    --color-atenuado: #666666;
+
+    /* Tipografía fluida: se adapta automáticamente entre móvil y escritorio */
+    --fuente-titulo: clamp(1.8rem, 4vw, 2.4rem);
+    --fuente-subtitulo: clamp(1rem, 2.5vw, 1.25rem);
+    --fuente-cuerpo: clamp(0.8rem, 1.5vw, 0.9rem);
+    --fuente-pequena: clamp(0.7rem, 1.2vw, 0.78rem);
+
+    /* Espaciado fluido */
+    --espacio-seccion: clamp(1.5rem, 5vw, 5rem);
+    --espacio-gap: clamp(0.75rem, 2vw, 1.25rem);
+
+    /* Tamaño del escudo */
+    --escudo-tamano: 56px;
+
+    /* Colores por categoría */
+    --color-competitiva: #c0392b;
+    --color-formativa: #27ae60;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ============================================================
+           ENCABEZADO DE LA PÁGINA — título y descripción de torneos
+        ============================================================ */
+.encabezado-pagina {
+    padding: clamp(2rem, 5vw, 3.5rem) var(--espacio-seccion) 0;
+}
+
+.encabezado-pagina h1 {
+    font-size: var(--fuente-titulo);
+    font-weight: 800;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.encabezado-pagina p {
+    font-size: var(--fuente-cuerpo);
+    color: var(--color-atenuado);
+    max-width: 640px;
+    line-height: 1.65;
+}
+
+/* ============================================================
+           SECCIÓN DE TORNEOS — contenedor principal de las categorías
+        ============================================================ */
+.seccion-torneos {
+    padding: clamp(1.5rem, 4vw, 2.5rem) var(--espacio-seccion) clamp(2rem, 5vw, 4rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+}
+
+/* Bloque individual por categoría (Competitiva / Formativa) */
+.bloque-categoria {
+    background: var(--color-blanco);
+    border-radius: 18px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    box-shadow: 0 3px 16px rgba(27, 63, 158, 0.09);
+}
+
+/* Encabezado de cada categoría con borde de color */
+.encabezado-categoria {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid;
+}
+
+/* Colores del borde según categoría */
+.encabezado-categoria.competitiva {
+    border-color: var(--color-competitiva);
+}
+
+.encabezado-categoria.formativa {
+    border-color: var(--color-formativa);
+}
+
+/* Badge de categoría (pastilla de color) */
+.insignia-categoria {
+    font-size: var(--fuente-pequena);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: var(--color-blanco);
+}
+
+.insignia-categoria.competitiva {
+    background: var(--color-competitiva);
+}
+
+.insignia-categoria.formativa {
+    background: var(--color-formativa);
+}
+
+/* Título de la categoría */
+.encabezado-categoria h2 {
+    font-size: var(--fuente-subtitulo);
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+/* ============================================================
+           GRID DE TARJETAS DE TORNEOS
+           auto-fill: crea columnas automáticamente según el espacio
+        ============================================================ */
+.cuadricula-torneos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: var(--espacio-gap);
+}
+
+/* Tarjeta individual de torneo */
+.tarjeta-torneo {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid #e8ecf5;
+    transition: transform 0.26s, box-shadow 0.26s;
+    cursor: pointer;
+    background: var(--color-fondo);
+}
+
+.tarjeta-torneo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(27, 63, 158, 0.15);
+}
+
+/* Imagen/flyer del torneo — relación 3:4 (tipo póster) */
+.imagen-torneo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+/* Placeholder de imagen cuando no hay foto real */
+.imagen-torneo-placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Degradados de fondo por deporte */
+.imagen-torneo-placeholder.futbol {
+    background: linear-gradient(160deg, #1a6b30, #2d9e4a);
+}
+
+.imagen-torneo-placeholder.voleibol {
+    background: linear-gradient(160deg, #1a3fa0, #2970e0);
+}
+
+.imagen-torneo-placeholder.baloncesto {
+    background: linear-gradient(160deg, #b04010, #e05820);
+}
+
+.imagen-torneo-placeholder.tenis {
+    background: linear-gradient(160deg, #456b10, #7ab020);
+}
+
+.imagen-torneo-placeholder.softbol {
+    background: linear-gradient(160deg, #6b3a1a, #c0681a);
+}
+
+/* Nombre del torneo dentro del placeholder */
+.imagen-torneo-placeholder span {
+    font-size: var(--fuente-pequena);
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* Pie de la tarjeta con título, deporte y estado */
+.pie-tarjeta {
+    padding: 12px 14px;
+}
+
+.pie-tarjeta .deporte-etiqueta {
+    font-size: var(--fuente-pequena);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--color-atenuado);
+    margin-bottom: 3px;
+}
+
+.pie-tarjeta .nombre-torneo {
+    font-size: clamp(0.78rem, 1.5vw, 0.9rem);
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+/* Fila inferior: fecha + estado */
+.pie-tarjeta .fila-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pie-tarjeta .fecha-torneo {
+    font-size: var(--fuente-pequena);
+    color: var(--color-atenuado);
+}
+
+/* Estado del torneo (pastilla) */
+.estado-torneo {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.estado-torneo.inscripciones {
+    background: #e8f5e9;
+    color: #27ae60;
+}
+
+.estado-torneo.en-curso {
+    background: #fff3e0;
+    color: #e67e22;
+}
+
+.estado-torneo.finalizado {
+    background: #f5f5f5;
+    color: #888;
+}
+
+.estado-torneo.proximo {
+    background: #e8eaf6;
+    color: #3949ab;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:var(--color-primario);
+    color:var(--color-blanco);
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* ============================================================
+           RESPONSIVE — ajustes por pantalla pequeña
+        ============================================================ */
+
+/* Móvil pequeño: ocultar menú o compactarlo */
+@media (max-width: 600px) {
+    .menu-nav {
+        gap: 0.8rem;
+    }
+
+    .menu-nav a {
+        font-size: 0.72rem;
+    }
+
+    /* En móvil muy pequeño, ocultar el menú completo
+               (se podría reemplazar con un menú hamburguesa) */
+    .menu-nav .ocultar-movil {
+        display: none;
+    }
+}
+
+/* Tablets: 2 columnas fijas como mínimo */
+@media (min-width: 481px) and (max-width: 768px) {
+    .cuadricula-torneos {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+}
+
+/* Pantallas grandes: limitar ancho máximo para no expandirse demasiado */
+@media (min-width: 1400px) {
+
+    .barra-nav,
+    .encabezado-pagina,
+    .seccion-torneos,
+    .pie-pagina {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Desactivar animaciones hover en dispositivos táctiles */
+@media (hover: none) {
+    .tarjeta-torneo:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
