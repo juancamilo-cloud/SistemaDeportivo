@@ -20,7 +20,7 @@
     --fs-sub: clamp(1rem, 2.5vw, 1.25rem);
     --fs-body: clamp(0.8rem, 1.5vw, 0.9rem);
 
-    --padding: clamp(20px,5vw,80px);
+    --padding: clamp(20px, 5vw, 80px);
 }
 
 /* ===================== */
@@ -33,21 +33,80 @@ body{
 }
 
 /* ===================== */
+/* 🔵 HEADER (IGUAL INICIO) */
+/* ===================== */
+.barra-navegacion{
+    background:#1b3f9e;
+    padding:12px 40px;
+    display:flex;
+    align-items:center;
+}
+
+/* LOGO COMPLETO CLICK */
+.marca-navegacion{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+    position:relative;
+}
+
+.escudo{
+    width:50px;
+}
+
+/* TEXTO */
+.texto-marca{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.bienestar{
+    font-size:11px;
+    letter-spacing:2px;
+    opacity:.9;
+}
+
+.unimagdalena{
+    font-size:18px;
+    font-weight:900;
+}
+
+/* LINEA HOVER */
+.marca-navegacion::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:.3s;
+}
+
+.marca-navegacion:hover::after{
+    width:100%;
+}
+
+/* ===================== */
 /* 🔥 PORTADA */
 /* ===================== */
 .portada{
     background: linear-gradient(135deg, #1b3f9e 0%, #2355c8 60%, #1a4ab5 100%);
     padding: clamp(40px,6vw,60px) var(--padding);
-    padding-top:80px; /* 🔥 FIX ESPACIO */
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     min-height:360px;
     position:relative;
     overflow:hidden;
 }
 
-/* círculo decorativo */
+/* CIRCULO */
 .portada::before{
     content:"";
     position:absolute;
@@ -59,69 +118,7 @@ body{
     border-radius:50%;
 }
 
-/* ===================== */
-/* 🔵 TOP BAR */
-/* ===================== */
-.top-bar{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-
-    background:rgba(0,0,0,0.2); /* 🔥 NUEVO */
-
-    padding:12px var(--padding);
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:10;
-}
-
-/* ===================== */
-/* LOGO */
-/* ===================== */
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:white;
-    font-weight:600;
-    text-decoration:none;
-    position:relative;
-}
-
-.logo img{
-    width:50px;
-}
-
-/* línea animada */
-.logo::after{
-    content:"";
-    position:absolute;
-    bottom:-4px;
-    left:0;
-    width:0;
-    height:2px;
-    background:white;
-    transition:.3s;
-}
-
-.logo:hover::after{
-    width:100%;
-}
-
-/* ===================== */
-/* USUARIO */
-/* ===================== */
-.usuario{
-    color:white;
-    font-size:20px;
-}
-
-/* ===================== */
-/* CONTENIDO PORTADA */
-/* ===================== */
+/* CONTENIDO */
 .contenido-portada{
     max-width:500px;
     z-index:1;
@@ -131,14 +128,12 @@ body{
     font-size:var(--fs-title);
     font-weight:800;
     color:white;
-    line-height:1.15;
     margin-bottom:15px;
 }
 
 .contenido-portada p{
     font-size:var(--fs-body);
     color:rgba(255,255,255,.85);
-    line-height:1.6;
     margin-bottom:30px;
 }
 
@@ -177,9 +172,7 @@ main{
     margin:auto;
 }
 
-/* ===================== */
 /* LAYOUT */
-/* ===================== */
 .layout-anuncios{
     display:grid;
     grid-template-columns:1fr;
@@ -187,13 +180,14 @@ main{
 }
 
 /* ===================== */
-/* CONTENIDO PRINCIPAL */
+/* CONTENIDO */
 /* ===================== */
 .contenido-principal{
     background:white;
     padding:25px;
     border-radius:16px;
     box-shadow:0 8px 20px rgba(0,0,0,.1);
+
     display:flex;
     flex-direction:column;
     gap:30px;
@@ -213,6 +207,7 @@ main{
     border-radius:15px;
     padding:12px;
     box-shadow:0 8px 18px rgba(0,0,0,.15);
+
     overflow:hidden;
     transition:.3s;
 
@@ -270,9 +265,10 @@ main{
     padding:15px;
     border-radius:12px;
     box-shadow:0 6px 15px rgba(0,0,0,.1);
+
     text-decoration:none;
-    transition:.2s;
     color:inherit;
+    transition:.2s;
 }
 
 .item:hover{
@@ -286,7 +282,6 @@ main{
 
 .info-evento h3{
     color:var(--color-primario);
-    font-size:var(--fs-body);
 }
 
 .info-evento p{
@@ -308,7 +303,6 @@ main{
     color:white;
     text-align:center;
     padding:12px;
-    font-size:var(--fs-sub);
 }
 
 .contenedor-partidos{
@@ -322,6 +316,7 @@ main{
     border-radius:12px;
     overflow:hidden;
     transition:.3s;
+
     width:100%;
     max-width:260px;
     margin:auto;
@@ -349,7 +344,6 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:30px;
-    font-size:0.9rem;
 }
 
 /* ===================== */
@@ -361,13 +355,6 @@ footer{
         flex-direction:column;
         text-align:center;
         padding:40px 20px;
-        padding-top:80px;
-    }
-
-    .top-bar{
-        position:static;
-        width:100%;
-        margin-bottom:20px;
     }
 
     .contenido-portada{
